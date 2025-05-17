@@ -17,7 +17,6 @@ ja:
   users:
     new:
       title: 'ユーザ登録'
-      password_confirmation: 'パスワード確認'
       to_login_page: 'ログインページへ'
     create:
       regist_successful: 'ユーザ登録に成功しました'

@@ -8,8 +8,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_back_or_to login_path
+      redirect_back_or_to(login_path, notice: t('.regist_successful') )
     else
+      flash.now[:alert] = t('.regist_failed')
       render :new
     end
   end

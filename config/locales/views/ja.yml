@@ -9,9 +9,17 @@ ja:
       title: 'ログイン'
       to_register_page: '登録ページへ'
       password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      login_successful: 'ログインしました'
+      login_failed: 'ログインに失敗しました'
+    destroy:
+      logout_successful: 'ログアウトしました'
   users:
     new:
       title: 'ユーザ登録'
       password_confirmation: 'パスワード確認'
       to_login_page: 'ログインページへ'
+    create:
+      regist_successful: 'ユーザ登録に成功しました'
+      regist_failed: 'ユーザ登録に失敗しました'
 

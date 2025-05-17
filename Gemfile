@@ -39,6 +39,7 @@ gem 'pry-byebug'
 gem 'byebug'
 gem 'sorcery'
 gem 'rails-i18n'
+gem 'draper'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

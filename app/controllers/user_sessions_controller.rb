@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_back_or_to(root_path, success: t('.login_successful') )
+      redirect_back_or_to root_path, success: t('.login_successful')
     else
       flash.now[:danger] = t('.login_failed')
       render action: 'new'
@@ -17,6 +17,8 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to root_path, success: t('.logout_successful')
+    flash[:success] = t('.logout_successful')
+    redirect_to root_path
+    #redirect_to root_path, success: t('.logout_successful') この書き方だとメッセージが出ない原因不明
   end
 end

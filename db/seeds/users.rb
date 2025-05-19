@@ -1,10 +1,7 @@
-#require './db/seeds/users'
-#require './db/seeds/posts'
-
+puts 'users ...'
 10.times do
   user = User.create!(
-    first_name: Faker::Name.name,
-    last_name: Faker::Name.name,
+    username: Faker::JapaneseMedia::StudioGhibli.unique.character,
     email: Faker::Internet.email,
     password: 'foobar',
     password_confirmation: 'foobar',

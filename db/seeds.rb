@@ -10,3 +10,11 @@
     password_confirmation: 'foobar',
   )
 end
+
+5.times do |i|
+  user = User.find(1+i)
+  board = user.boards.create!(
+    title: Faker::Book.title,
+    body: Faker::Lorem.paragraph,
+  )
+end

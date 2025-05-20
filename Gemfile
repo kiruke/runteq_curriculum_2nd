@@ -41,6 +41,7 @@ gem 'sorcery'
 gem 'rails-i18n'
 gem 'draper'
 gem 'faker'
+gem 'bullet'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

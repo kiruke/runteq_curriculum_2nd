@@ -28,5 +28,7 @@ ja:
     new:
       title: '掲示板作成'
     create:
+      success: '掲示板を作成しました'
+      failed: '掲示板の作成に失敗しました' 
     destroy:
 

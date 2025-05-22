@@ -1,2 +1,14 @@
-<h1>Boards#new</h1>
-<p>Find me in app/views/boards/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1>掲示板作成</h1>
+      <%= form_with model: @board, local: true, class: "needs-validation" do |f|  %>
+          <%= f.label :title %> 
+          <%= f.text_field :title %>
+          <%= f.label :body %>
+          <%= f.text_field :body %>
+          <%= f.submit "Submit" %>
+      <% end %> 
+    </div>
+  </div>
+</div>

@@ -10,10 +10,11 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
+    @board.user = current_user
     if @board.save
-      redirect_back_or_to(board_path, success: t('.regist_successful') )
+      redirect_back_or_to(boards_path, success: t('.success') )
     else
-      flash.now[:danger] = t('.regist_failed')
+      flash.now[:danger] = t('.failed')
       render :new
     end
   end

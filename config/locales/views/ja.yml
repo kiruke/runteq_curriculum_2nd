@@ -21,4 +21,12 @@ ja:
     create:
       regist_successful: 'ユーザ登録に成功しました'
       regist_failed: 'ユーザ登録に失敗しました'
+  boards:
+    index:
+      title: '掲示板一覧'
+      no_result: '掲示板がありません'
+    new:
+      title: '掲示板作成'
+    create:
+    destroy:
 

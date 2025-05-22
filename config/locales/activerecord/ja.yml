@@ -9,3 +9,6 @@ ja:
         password_confirmation: 'パスワード確認'
         first_name: '名'
         last_name: '性'
+      boards:
+        title: 'タイトル'
+        body: '本文'

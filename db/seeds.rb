@@ -11,7 +11,7 @@
   )
 end
 
-5.times do |i|
+10.times do |i|
   user = User.find(1+i)
   board = user.boards.create!(
     title: Faker::Book.title,

@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    #@boards = Board.all
+    #@boards = Board.all N+1発生
     @boards = Board.includes(:user).all
   end
 

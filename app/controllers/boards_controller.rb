@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   def index
     #@boards = Board.all N+1発生
-    @boards = Board.includes(:user).all
+    @boards = Board.includes(:user).order(create_at: :desc)
   end
 
   def new

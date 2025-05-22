@@ -11,10 +11,18 @@
   )
 end
 
-10.times do |i|
-  user = User.find(1+i)
-  board = user.boards.create!(
-    title: Faker::Book.title,
-    body: Faker::Lorem.paragraph,
+# 10.times do |i|
+#   user = User.find(1+i)
+#   board = user.boards.create!(
+#     title: Faker::Book.title,
+#     body: Faker::Lorem.paragraph,
+#   )
+# end
+
+20.times do |index|
+  Board.create!(
+      user: User.offset(rand(User.count)).first,
+      title: "タイトル#{index}",
+      body: "本文#{index}"
   )
 end

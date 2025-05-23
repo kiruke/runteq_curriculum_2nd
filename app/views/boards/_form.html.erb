@@ -1,0 +1,7 @@
+<%= form_with model: board, local: true, class: "needs-validation" do |f|  %>
+  <%= f.label :title %> 
+  <%= f.text_field :title, class: 'form-control' %>
+  <%= f.label :body %>
+  <%= f.text_area :body, class: 'form-control', rows: 10  %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %> 

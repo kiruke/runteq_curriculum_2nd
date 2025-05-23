@@ -9,8 +9,9 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board = Board.new(board_params)
-    @board.user = current_user
+    #@board = Board.new(board_params) 関連付けがある場合はbuild
+    #@board.user = current_user
+    @board = current_user.boards.build(board_params)
     if @board.save
       redirect_back_or_to(boards_path, success: t('.success') )
     else

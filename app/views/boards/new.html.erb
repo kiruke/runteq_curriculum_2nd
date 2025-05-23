@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1>掲示板作成</h1>
+      <h1><%= t('.title') %></h1>
       <%= form_with model: @board, local: true, class: "needs-validation" do |f|  %>
           <%= f.label :title %> 
-          <%= f.text_field :title %>
+          <%= f.text_field :title, class: 'form-control' %>
           <%= f.label :body %>
-          <%= f.text_field :body %>
-          <%= f.submit "Submit" %>
+          <%= f.text_area :body, class: 'form-control', rows: 10  %>
+          <%= f.submit class: 'btn btn-primary' %>
       <% end %> 
     </div>
   </div>

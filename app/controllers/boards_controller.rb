@@ -13,9 +13,11 @@ class BoardsController < ApplicationController
     #@board.user = current_user
     @board = current_user.boards.build(board_params)
     if @board.save
-      redirect_back_or_to(boards_path, success: t('.success') )
+      #redirect_back_or_to(boards_path, success: t('.success') )
+      redirect_to boards_path, success: t('defaults.message.created', item: Board.model_name.human)
     else
-      flash.now[:danger] = t('.failed')
+      #flash.now[:danger] = t('.failed')
+      flash.now[:danger] = t('defaults.message.not_created', item: Board.model_name.human)
       render :new
     end
   end

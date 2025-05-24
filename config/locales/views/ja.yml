@@ -4,6 +4,9 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     profile: 'プロフィール'
+    message:
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
   user_sessions:
     new:
       title: 'ログイン'

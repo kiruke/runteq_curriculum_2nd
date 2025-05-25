@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8">
       <h1 class="mb-4 text-center"><%= t('.title') %></h1>
-
+      <%= render partial: "shared/errors", locals: { object: @user } %>
       <%= form_with model: @user, local: true, class: "needs-validation" do |f| %>
         <div class="mb-3">
           <%= f.label :last_name, class: "form-label" %>

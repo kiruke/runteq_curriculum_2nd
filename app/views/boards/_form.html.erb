@@ -3,6 +3,9 @@
   <%= f.text_field :title, class: 'form-control' %>
   <%= f.label :body %>
   <%= f.text_area :body, class: 'form-control', rows: 10  %>
-  <%= f.file_field :image %>
+  <%= f.file_field :image, id: 'image-upload', class: 'form_control' %>
+  <div id="image-preview" style="margin-top: 10px;">
+    <!-- プレビュー画像がここに表示される -->
+  </div>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %> 

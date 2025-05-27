@@ -44,6 +44,7 @@ gem 'faker'
 gem 'bullet'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'turbolinks', '~> 5.2.0'
 
 
 group :development, :test do

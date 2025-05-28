@@ -3,9 +3,13 @@
   <%= f.text_field :title, class: 'form-control' %>
   <%= f.label :body %>
   <%= f.text_area :body, class: 'form-control', rows: 10  %>
-  <%= f.file_field :image, id: 'image-upload', class: 'form_control' %>
+  <%= f.file_field :image, id: 'image-upload', class: 'form_control mb-3' %>
+  <%= f.hidden_field :image_cache %>
   <div id="image-preview" style="margin-top: 10px;">
     <!-- プレビュー画像がここに表示される -->
+    <% if @board.image_cache.present? %>
+    <%= image_tag "/uploads/tmp/#{@board.image_cache}", style: 'max-width: 200px;', alt: 'Preview' %>
+    <% end %>
   </div>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %> 

@@ -11,6 +11,7 @@ class BoardsController < ApplicationController
   def create
     #@board = Board.new(board_params) 関連付けがある場合はbuild
     #@board.user = current_user
+    logger.debug "image_cache: #{params[:board][:image_cache]}"
     @board = current_user.boards.build(board_params)
     if @board.save
       #redirect_back_or_to(boards_path, success: t('.success') )
@@ -32,7 +33,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :body, :image)
+    params.require(:board).permit(:title, :body, :image, :image_cache)
   end
 
 end

@@ -27,6 +27,10 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
   end
 
+  def show
+
+  end
+
   def update
   end
 

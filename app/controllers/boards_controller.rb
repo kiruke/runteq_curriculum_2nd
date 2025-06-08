@@ -30,8 +30,8 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
     #@comments = @board.comments
     #@comments = Board.includes(:comments).where(id: @board.id).order(created_at: :desc)
-    @comments = @board.comments.includes(:user).order(created_at: :desc)
     @comment = Comment.new
+    @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
 
   def update

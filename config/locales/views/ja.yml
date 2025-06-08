@@ -4,6 +4,7 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     profile: 'プロフィール'
+    post: '投稿'
     message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成できませんでした"
@@ -22,8 +23,8 @@ ja:
       title: 'ユーザ登録'
       to_login_page: 'ログインページへ'
     create:
-      regist_successful: 'ユーザ登録に成功しました'
-      regist_failed: 'ユーザ登録に失敗しました'
+      successful: 'ユーザ登録に成功しました'
+      failed: 'ユーザ登録に失敗しました'
   boards:
     index:
       title: '掲示板一覧'
@@ -34,4 +35,7 @@ ja:
       success: '掲示板を作成しました'
       failed: '掲示板の作成に失敗しました' 
     destroy:
+    show:
+      title: '掲示板詳細'
+      
 

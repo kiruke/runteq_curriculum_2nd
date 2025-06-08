@@ -8,7 +8,7 @@
   <div id="image-preview" style="margin-top: 10px;">
     <!-- プレビュー画像がここに表示される -->
     <% if @board.image_cache.present? %>
-    <%= image_tag "/uploads/tmp/#{@board.image_cache}", style: 'max-width: 200px;', alt: 'Preview' %>
+      <%= image_tag "/uploads/tmp/#{@board.image_cache}", style: 'max-width: 200px;', alt: 'Preview' %>
     <% end %>
   </div>
   <%= f.submit class: 'btn btn-primary' %>

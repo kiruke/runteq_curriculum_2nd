@@ -6,7 +6,9 @@
         <h4 class="card-title">
           <a href="#"><%= link_to board.title, board_path(board)%></a>
         </h4>
-        <%= render 'crud_menus', board: board %>
+        <% if board.is_mine?(current_user) %>
+          <%= render 'crud_menus', board: board %>
+        <% end %>
         <ul class="list-inline">
           <li class="list-inline-item"><i class="far fa-user"></i><%= board.user.decorate.full_name%></li>
           <li class="list-inline-item"><i class="far fa-calendar"></i><%= board.created_at.to_s(:datetime_jp) %> </li>

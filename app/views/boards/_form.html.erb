@@ -1,3 +1,4 @@
+<% content_for(:title, t('.title')) %>
 <%= form_with model: board, local: true, class: "needs-validation" do |f|  %>
   <%= f.label :title %> 
   <%= f.text_field :title, class: 'form-control' %>

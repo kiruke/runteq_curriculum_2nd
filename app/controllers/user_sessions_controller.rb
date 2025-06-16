@@ -17,9 +17,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    #flash[:success] = t('.logout_successful')
-    #redirect_to root_path
-    #Rails.logger.debug session.inspect
     redirect_to root_path, success: t('.logout_successful')
   end
 end

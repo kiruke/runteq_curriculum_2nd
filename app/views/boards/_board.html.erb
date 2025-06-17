@@ -8,10 +8,18 @@
         </h4>
         <% if board.is_mine?(current_user) %>
           <%= render 'crud_menus', board: board %>
+        <% else %>
+          <%= render 'bookmark_button', board: board %>
         <% end %>
         <ul class="list-inline">
-          <li class="list-inline-item"><i class="far fa-user"></i><%= board.user.decorate.full_name%></li>
-          <li class="list-inline-item"><i class="far fa-calendar"></i><%= board.created_at.to_s(:datetime_jp) %> </li>
+          <li class="list-inline-item d-block">
+            <%= icon "far", "fa-user" %>
+            <%= board.user.decorate.full_name%>
+          </li>
+          <li class="list-inline-item d-block">
+            <%= icon "far", "calendar" %>
+            <%= board.created_at.to_s(:datetime_jp) %>
+          </li>
         </ul>
         <p class="card-text"><%= board.body %></p>
       </div>

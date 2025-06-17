@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :boards, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: [:create, :destroy], shallow: true
+    resources :bookmarks, only: [:index, :create, :destroy], shallow: true
   end
 end

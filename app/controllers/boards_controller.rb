@@ -25,7 +25,7 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    @board.destroy
+    @board.destroy!
     redirect_to boards_path, success: t('defaults.message.deleted', item: Board.model_name.human)
   end
 

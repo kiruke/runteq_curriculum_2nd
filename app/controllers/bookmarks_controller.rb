@@ -9,6 +9,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
+    bookmark = current_user.bookmarks.find_by(id: params[:id])
     bookmark.destroy!
     redirect_to boards_path, notice: ('bookmarkを削除しました')
   end

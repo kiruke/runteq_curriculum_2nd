@@ -17,7 +17,7 @@
         <% if @boards.present? %>
           <% @boards.each do |board| %>
             <%= render partial: 'board', locals: { board: board } %>
-            <%#= render @board %> 
+            <%#= render @boards #上記のeach doはこの一文で置き換え出来る。%> 
           <% end %>
         <% else %>
           <%= t('.no_result') %>

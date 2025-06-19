@@ -1,7 +1,9 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="board-id-<%= board.id %>">
     <div class="card">
+      <% if board.image.present? %>
       <%= image_tag board.image.url, class: "card-img-top",  width: "300", height: "200" %>
+      <% end %>
       <div class="card-body">
         <h4 class="card-title">
           <a href="#"><%= link_to board.title, board_path(board)%></a>
@@ -9,7 +11,7 @@
         <% if board.is_mine?(current_user) %>
           <%= render 'crud_menus', board: board %>
         <% else %>
-          <%= render 'bookmark_button', board: board %>
+          <%= render 'boards/bookmark_button', board: board %>
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item d-block">

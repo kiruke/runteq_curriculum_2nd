@@ -12,4 +12,8 @@ class Board < ApplicationRecord
   def is_mine?(current_user)
     self.user == current_user
   end
+
+  def bookmark_by?(current_user)
+    bookmarks.where(user_id: current_user.id).exists?
+  end
 end

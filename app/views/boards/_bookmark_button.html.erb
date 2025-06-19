@@ -1,7 +1,9 @@
 <ul class='crud-menu-btn list-inline float-right'>
   <li class="list-inline-item">
-    <%= link_to board_bookmarks_path(board), method: :post, id: "js-bookmark-button-for-board-#{board.id}" do %>
-      <%= icon('far', 'star') %>
+    <% if board.bookmark_by?(current_user) %>
+      <%= render 'unbookmark', board: board %>
+        <% else %>
+      <%= render 'bookmark', board: board %>
     <% end %>
   </li>
 </ul>

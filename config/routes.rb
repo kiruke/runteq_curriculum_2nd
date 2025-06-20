@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:index], shallow: true
   end
   resources :boards, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
-    resources :comments, only: [:create, :destroy], shallow: true
-    resources :bookmarks, only: [:create, :destroy], shallow: true
+    resources :comments, only: [:create], shallow: true
+    collection do
+      get :bookmarks
+    end
   end
+  resources :bookmarks, only: [:create, :destroy]
 end

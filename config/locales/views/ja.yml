@@ -12,6 +12,8 @@ ja:
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
       delete_confirm: '削除しますか？'
+      bookmarked: "ブックマークしました"
+      delete_bookmark: "ブックマークを外しました"
   user_sessions:
     new:
       title: 'ログイン'
@@ -42,3 +44,7 @@ ja:
       title: '掲示板詳細'
     edit:
       title: '掲示板編集'
+  bookmarks:
+    index:
+      title: 'ブックマーク一覧'
+      no_result: 'ブックマークがありません'

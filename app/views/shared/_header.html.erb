@@ -21,8 +21,11 @@
           </div>
         </li>
 
-        <li class='nav-item'>
-          <%= link_to 'ブックマーク一覧', user_bookmarks_path(current_user), class: 'nav-item' %>
+        <li class='nav-link'>
+          <%#= link_to t('bookmarks.index.title'), user_bookmarks_path(current_user), class: 'nav-link' %>
+          <%= link_to user_bookmarks_path(current_user), class: 'nav-link' do %>
+            <%= icon('fa', 'star') %>
+          <% end %>
         </li>
 
         <li class='nav-item dropdown dropdown-slide'>

@@ -2,16 +2,14 @@ class BookmarksController < ApplicationController
   def create
     bookmark = current_user.bookmarks.build(board_id: params[:board_id])
     if bookmark.save
-      redirect_to boards_path, success: ('ブックマークしました')
-    else
-      redirect_back_or_to boards_path, alert: 'ブックマークに失敗しました'
+      redirect_to boards_path, success: t('defaults.message.bookmarked', item: Bookmark.model_name.human)
     end
   end
 
   def destroy
     bookmark = current_user.bookmarks.find_by(id: params[:id])
     bookmark.destroy!
-    redirect_to boards_path, success: ('ブックマークを外しました')
+    redirect_to boards_path, success: t('defaults.message.delete_bookmark', item: Bookmark.model_name.human)
   end
 
   def index

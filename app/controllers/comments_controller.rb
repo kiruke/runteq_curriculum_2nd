@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def create 
-    #@board = Board.find(params[:board_id])
     @comment = current_user.comments.build(comment_params)
     respond_to do |format|
       if @comment.save

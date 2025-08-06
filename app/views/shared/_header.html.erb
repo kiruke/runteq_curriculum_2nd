@@ -22,8 +22,7 @@
         </li>
 
         <li class='nav-link'>
-          <%#= link_to t('bookmarks.index.title'), user_bookmarks_path(current_user), class: 'nav-link' %>
-          <%= link_to user_bookmarks_path(current_user), class: 'nav-link' do %>
+          <%= link_to bookmarks_boards_path, class: 'nav-link' do %>
             <%= icon('fa', 'star') %>
           <% end %>
         </li>

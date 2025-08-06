@@ -14,9 +14,9 @@
   <div class="row">
     <div class="col-12">
       <div class="row">
-        <% if @bookmarks.present? %>
-          <% @bookmarks.each do |bookmark| %>
-            <%= render partial: 'boards/board', locals: { board: bookmark.board } %>
+        <% if @board_bookmarks.present? %>
+          <% @board_bookmarks.each do |bookmark| %>
+            <%= render partial: 'boards/board', locals: { board: bookmark } %>
           <% end %>
         <% else %>
           <%= t('.no_result') %>

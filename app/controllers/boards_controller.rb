@@ -49,6 +49,10 @@ class BoardsController < ApplicationController
     end 
   end
 
+  def bookmarks
+    @board_bookmarks = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def board_params

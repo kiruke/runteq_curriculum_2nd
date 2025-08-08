@@ -21,9 +21,8 @@
         <a href="#"><i class='fa fa-pen'></i></a>
       </li>
       <li class="list-inline-item">
-        <a href="#">
-          <i class="fa fa-trash"></i>
-        </a>
+          <%= link_to "削除", comment_path(comment), 
+            method: :delete %>
       </li>
     </ul>
   </td>

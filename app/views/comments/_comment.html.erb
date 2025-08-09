@@ -21,8 +21,12 @@
         <a href="#"><i class='fa fa-pen'></i></a>
       </li>
       <li class="list-inline-item">
-          <%= link_to "削除", comment_path(comment), 
-            method: :delete %>
+          <%= link_to comment_path(comment), 
+            method: :delete, 
+            remote: true, 
+            id: "js-comment-#{comment.id}" do %>
+            <%= icon('fa', 'trash') %>
+          <% end %>
       </li>
     </ul>
   </td>

@@ -13,9 +13,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    comment = current_user.comments.find(params[:id])
+    @comment = current_user.comments.find(params[:id])
     respond_to do |format|
-      if comment.destroy
+      if @comment.destroy
       #redirect_back fallback_location: root_path, success: t('defaults.message.delete_comment')
         format.js
       else

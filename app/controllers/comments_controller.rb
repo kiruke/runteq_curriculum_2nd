@@ -1,26 +1,12 @@
 class CommentsController < ApplicationController
   def create 
     @comment = current_user.comments.build(comment_params)
-    respond_to do |format|
-      if @comment.save
-        #redirect_to board_path(comment.board), success: t('defaults.message.created', item: Comment.model_name.human) 
-        format.js
-      else
-        #redirect_to board_path(comment.board), danger: t('defaults.message.not_created', item: Comment.model_name.human)
-        format.js
-      end
-    end
+    @comment.save
   end
 
   def destroy
     @comment = current_user.comments.find(params[:id])
-    respond_to do |format|
-      if @comment.destroy
-        format.js
-      else
-        format.js
-      end
-    end
+    @comment.destroy
   end
 
   private

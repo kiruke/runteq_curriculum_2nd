@@ -45,6 +45,7 @@ gem 'bullet'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'turbolinks', '~> 5.2.0'
+gem 'kaminari'
 
 
 group :development, :test do

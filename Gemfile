@@ -46,7 +46,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'turbolinks', '~> 5.2.0'
 gem 'kaminari'
-gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'bootstrap4-kaminari-views'
 
 
 group :development, :test do

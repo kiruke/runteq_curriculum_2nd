@@ -47,6 +47,7 @@ gem 'mini_magick'
 gem 'turbolinks', '~> 5.2.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
+gem 'ransack'
 
 
 group :development, :test do

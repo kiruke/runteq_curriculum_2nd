@@ -3,7 +3,8 @@ class BoardsController < ApplicationController
 
   def index
     #@boards = Board.all N+1発生
-    @boards = Board.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = Board.ransack(params[:q])
+    @boards = @q.result.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new

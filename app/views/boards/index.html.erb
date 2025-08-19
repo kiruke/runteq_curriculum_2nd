@@ -3,13 +3,7 @@
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
       <!-- 検索フォーム -->
-      <%= search_form_for @q do |f| %>
-        <div class="input-group mb-3">
-          <%= f.label :title_or_body_cont %>
-          <%= f.search_field :title_or_body_cont, class: "form-control", placeholder: "検索ワード" %>
-        </div>
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
+      <%= render 'search_form' %>
     </div>
   </div>
   <!-- 掲示板一覧 -->

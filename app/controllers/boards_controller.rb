@@ -2,7 +2,6 @@ class BoardsController < ApplicationController
   before_action :set_board, only: [:edit, :update, :destroy]
 
   def index
-    #@boards = Board.all N+1発生
     @q = Board.ransack(params[:q])
     @boards = @q.result.includes(:user).order(created_at: :desc).page(params[:page])
   end

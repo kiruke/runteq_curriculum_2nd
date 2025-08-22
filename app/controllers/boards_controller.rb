@@ -11,7 +11,6 @@ class BoardsController < ApplicationController
   end
 
   def create
-    #@board = Board.new(board_params) 関連付けがある場合はbuild
     #@board.user = current_user
     @board = current_user.boards.build(board_params)
     if @board.save
@@ -30,7 +29,6 @@ class BoardsController < ApplicationController
   end
 
   def show
-    #@comments = @board.comments
     #@comments = Board.includes(:comments).where(id: @board.id).order(created_at: :desc)
     @board = Board.find(params[:id])  
     @comment = Comment.new

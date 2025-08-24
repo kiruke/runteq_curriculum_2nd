@@ -1,0 +1,40 @@
+<% content_for(:title, t('.title')) %>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <h1 class="mb-4 text-center"><%= t('.title') %></h1>
+      <%= render partial: "shared/errors", locals: { object: @profile } %>
+      <%= form_with model: @profile, url: profile_path(@profile), local: true, class: "needs-validation" do |f| %>
+        <div class="mb-3">
+          <%= f.label :last_name, class: "form-label" %>
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :first_name, class: "form-label" %>
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :email, class: "form-label" %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+
+        <div class="mb-3">
+        <%= f.file_field :avatar, id: 'image-upload', class: 'form_control mb-3' %>
+        <%= f.hidden_field :avatar_cache %>
+        <div id="image-preview" style="margin-top: 10px;">
+        <!-- プレビュー画像がここに表示される -->
+        <% if @profile.avatar_cache.present? %>
+          <%= image_tag "/uploads/tmp/#{@profile.avatar_cache}", style: 'max-width: 200px;', alt: 'Preview' %>
+        <% end %>
+       </div> 
+  </div>
+
+        <div class="d-grid mb-3">
+          <%= f.submit "更新", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

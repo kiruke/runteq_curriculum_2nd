@@ -26,11 +26,10 @@
         <div id="image-preview" style="margin-top: 10px;">
         <!-- プレビュー画像がここに表示される -->
         <% if @profile.avatar_cache.present? %>
-          <%= image_tag "/uploads/tmp/#{@profile.avatar_cache}", style: 'max-width: 200px;', alt: 'Preview' %>
+          <%= image_tag "/uploads/tmp/#{@profile.avatar_cache}", class: 'rounded-circle', id: 'Preview', size: '100x100' %>
         <% end %>
-       </div> 
+      </div> 
   </div>
-
         <div class="d-grid mb-3">
           <%= f.submit "更新", class: "btn btn-primary" %>
         </div>

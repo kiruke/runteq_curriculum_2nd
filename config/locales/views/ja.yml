@@ -48,3 +48,8 @@ ja:
     index:
       title: 'ブックマーク一覧'
       no_result: 'ブックマークがありません'
+  profile:
+    show:
+      title: 'プロフィール'
+    edit:
+      title: 'プロフィール'

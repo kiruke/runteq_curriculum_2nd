@@ -29,7 +29,7 @@
 
         <li class='nav-item dropdown dropdown-slide'>
           <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-            <%= image_tag @profile.avatar.url, class: 'rounded-circle mr15', width: '40', height: '40' %>
+            <%= image_tag current_user.avatar.url, class: 'rounded-circle mr15', width: '40', height: '40' %>
           </a>
           <div class='dropdown-menu dropdown-menu-right'>
             <div class='dropdown-item'><%= current_user.decorate.full_name %></div>

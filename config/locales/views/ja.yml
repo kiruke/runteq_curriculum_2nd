@@ -35,6 +35,8 @@ ja:
     index:
       title: '掲示板一覧'
       no_result: '掲示板がありません'
+    bookmarks:
+      title: 'ブックマーク一覧'
     new:
       title: '掲示板作成'
     create:
@@ -44,12 +46,8 @@ ja:
       title: '掲示板詳細'
     edit:
       title: '掲示板編集'
-  bookmarks:
-    index:
-      title: 'ブックマーク一覧'
-      no_result: 'ブックマークがありません'
-  profile:
+  profiles:
     show:
       title: 'プロフィール'
     edit:
-      title: 'プロフィール'
+      title: 'プロフィール編集'
